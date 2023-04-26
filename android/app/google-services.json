@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "614946794368",
+    "project_id": "budgeto-b411d",
+    "storage_bucket": "budgeto-b411d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:614946794368:android:558fddf05728360ec42f65",
+        "android_client_info": {
+          "package_name": "com.tejasbadone.budgeto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "614946794368-i3kpu9dg70dl4tt467u8k4o5qb2n8n7u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYgGvjdTWltt0XAEGsC2hG_9nYogjH_0c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "614946794368-i3kpu9dg70dl4tt467u8k4o5qb2n8n7u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
