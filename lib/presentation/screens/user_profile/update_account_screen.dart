@@ -48,7 +48,6 @@ class _UpdateAccountScreenState extends State<UpdateAccountScreen> {
   final _formKey = GlobalKey<FormState>();
 
   bool loading = false;
-  bool _formFilledOut = false;
 
   final fullNameController = TextEditingController();
   final phoneNumberController = TextEditingController();
@@ -85,7 +84,6 @@ class _UpdateAccountScreenState extends State<UpdateAccountScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       body: ChangeNotifierProvider(
         create: (_) => ProfileController(),
         child: Consumer<ProfileController>(
@@ -123,7 +121,6 @@ class _UpdateAccountScreenState extends State<UpdateAccountScreen> {
                                       textAlign: TextAlign.start,
                                       style: TextStyle(
                                           fontSize: 24,
-                                          color: kFontBlackC,
                                           fontWeight: FontWeight.w400),
                                     ),
                                   ],
@@ -134,13 +131,15 @@ class _UpdateAccountScreenState extends State<UpdateAccountScreen> {
                                     children: [
                                       Container(
                                         height: 120,
-                                        width: 120,
+                                        width: 130,
                                         decoration: BoxDecoration(
                                             border: Border.all(
                                                 width: 4,
-                                                color: kTextFieldBorderC),
+                                                color: Theme.of(context)
+                                                    .cardColor),
                                             shape: BoxShape.circle,
-                                            color: kGrayTextfieldC),
+                                            color:
+                                                Theme.of(context).canvasColor),
                                         child: ClipRRect(
                                           borderRadius:
                                               BorderRadius.circular(100),
@@ -157,16 +156,18 @@ class _UpdateAccountScreenState extends State<UpdateAccountScreen> {
                                       ),
                                       Positioned(
                                         bottom: 10,
-                                        right: -2,
+                                        right: 3,
                                         child: Container(
                                             height: 35,
                                             width: 35,
                                             decoration: BoxDecoration(
                                                 border: Border.all(
-                                                    width: 4,
-                                                    color: kGrayTextfieldC),
+                                                    width: 3,
+                                                    color: Theme.of(context)
+                                                        .primaryColor),
                                                 shape: BoxShape.circle,
-                                                color: kGrayTextC),
+                                                color: Theme.of(context)
+                                                    .cardColor),
                                             child: GestureDetector(
                                               onTap: () {
                                                 provider.pickImage(context);
@@ -174,7 +175,7 @@ class _UpdateAccountScreenState extends State<UpdateAccountScreen> {
                                               child: const Icon(
                                                 Icons.edit,
                                                 size: 20,
-                                                color: kGrayTextfieldC,
+                                                color: kGrayTextC,
                                               ),
                                             )),
                                       ),
@@ -239,29 +240,27 @@ class _UpdateAccountScreenState extends State<UpdateAccountScreen> {
                                           size: 18,
                                           Icons.currency_rupee),
                                       filled: true,
-                                      fillColor: kTextFieldColor,
-                                      hoverColor: kGreenColor,
+                                      // fillColor: kTextFieldColor,
+                                      hoverColor:
+                                          Theme.of(context).primaryColor,
                                       focusColor: kTextFieldColor,
-                                      focusedBorder: OutlineInputBorder(
-                                        borderSide: const BorderSide(
-                                            color: kTextFieldBorderC),
-                                        borderRadius: BorderRadius.circular(12),
-                                      ),
-                                      enabledBorder: OutlineInputBorder(
-                                        borderSide: const BorderSide(
-                                            color: kTextFieldBorderC),
-                                        borderRadius: BorderRadius.circular(12),
-                                      ),
+                                      focusedBorder: Theme.of(context)
+                                          .inputDecorationTheme
+                                          .focusedBorder,
+                                      enabledBorder: Theme.of(context)
+                                          .inputDecorationTheme
+                                          .enabledBorder,
                                     ),
                                     child: DropdownButtonHideUnderline(
                                       child: DropdownButton(
                                         style: const TextStyle(
                                             color: kGrayTextC,
+                                            fontSize: 16,
                                             fontFamily: 'Outfit'),
                                         // itemHeight: 2,
                                         icon: const Icon(
                                           Icons.expand_more,
-                                          color: kGrayTextC,
+                                          // color: kGrayTextC,
                                         ),
                                         value: dropdownValue,
                                         isExpanded: true,
@@ -282,15 +281,12 @@ class _UpdateAccountScreenState extends State<UpdateAccountScreen> {
                                 ),
                                 TButton(
                                   constraints: constraints,
-                                  btnColor: kGreenColor,
+                                  btnColor: Theme.of(context).primaryColor,
                                   btnText: 'Continue',
                                   onPressed: () {
                                     if (_formKey.currentState!.validate()) {
                                       _formKey.currentState!.save();
                                       update();
-                                      setState(() {
-                                        _formFilledOut = true;
-                                      });
                                     }
                                   },
                                 ),

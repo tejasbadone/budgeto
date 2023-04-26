@@ -35,9 +35,7 @@ class _WalletScreenState extends State<WalletScreen>
                         'My Wallet',
                         textAlign: TextAlign.start,
                         style: TextStyle(
-                            fontSize: 28,
-                            color: kFontBlackC,
-                            fontWeight: FontWeight.w400),
+                            fontSize: 28, fontWeight: FontWeight.w400),
                       ),
                       SizedBox(
                         height: constraints.maxHeight * 0.005,

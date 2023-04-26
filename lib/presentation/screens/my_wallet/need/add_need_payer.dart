@@ -6,6 +6,7 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
+import '../../../../budgeto_themes.dart';
 import '../../../../colors.dart';
 import '../../../../logic/autopay.dart';
 import '../../../../logic/flutter_toast.dart';
@@ -38,16 +39,68 @@ class _AddNeedPayerState extends State<AddNeedPayer> {
   TimeOfDay selectedTime = TimeOfDay.now();
 
   Future<void> _selectedDateTime(BuildContext context) async {
+    ThemeData currentTheme = Theme.of(context);
+
+    if (currentTheme.brightness == Brightness.light) {
+      currentTheme = BudgetoThemes.lightTheme;
+    } else {
+      currentTheme = BudgetoThemes.darkTheme;
+    }
+
     final DateTime? picked = await showDatePicker(
-        context: context,
-        initialDate: selectedDate,
-        firstDate: DateTime.now(),
-        lastDate: DateTime.now().add(const Duration(days: 365)));
+      context: context,
+      initialDate: selectedDate,
+      firstDate: DateTime.now(),
+      lastDate: DateTime.now().add(const Duration(days: 365)),
+      builder: (context, child) {
+        return Theme(
+          data: currentTheme.copyWith(
+            dialogBackgroundColor: Theme.of(context).cardColor,
+            colorScheme: ColorScheme.light(
+              primary: Theme.of(context).primaryColor,
+              onPrimary: Theme.of(context).cardColor,
+              onSurface: Theme.of(context).primaryColor,
+              surface: Theme.of(context).cardColor,
+            ),
+            textButtonTheme: TextButtonThemeData(
+              style: TextButton.styleFrom(
+                foregroundColor:
+                    Theme.of(context).primaryColor, // button text color
+              ),
+            ),
+          ),
+          child: child!,
+        );
+      },
+    );
 
     if (picked != null) {
       final TimeOfDay? pickedTime =
           // ignore: use_build_context_synchronously
-          await showTimePicker(context: context, initialTime: selectedTime);
+          await showTimePicker(
+        context: context,
+        initialTime: selectedTime,
+        builder: (context, child) {
+          return Theme(
+            data: currentTheme.copyWith(
+              dialogBackgroundColor: Theme.of(context).cardColor,
+              colorScheme: ColorScheme.light(
+                surface: Theme.of(context).cardColor,
+                primary: Theme.of(context).primaryColor,
+                onPrimary: Theme.of(context).cardColor,
+                onSurface: Theme.of(context).primaryColor,
+              ),
+              textButtonTheme: TextButtonThemeData(
+                style: TextButton.styleFrom(
+                  foregroundColor:
+                      Theme.of(context).primaryColor, // button text color
+                ),
+              ),
+            ),
+            child: child!,
+          );
+        },
+      );
 
       if (pickedTime != null) {
         setState(() {
@@ -261,9 +314,7 @@ class _AddNeedPayerState extends State<AddNeedPayer> {
                                 'Add Payer',
                                 textAlign: TextAlign.start,
                                 style: TextStyle(
-                                    fontSize: 28,
-                                    color: kFontBlackC,
-                                    fontWeight: FontWeight.w400),
+                                    fontSize: 28, fontWeight: FontWeight.w400),
                               ),
                             ],
                           ),
@@ -330,8 +381,9 @@ class _AddNeedPayerState extends State<AddNeedPayer> {
                             children: [
                               const Text(
                                 'Autopay',
-                                style:
-                                    TextStyle(fontSize: 18, color: kFontBlackC),
+                                style: TextStyle(
+                                  fontSize: 18,
+                                ),
                               ),
                               Switch(
                                   activeColor: kGreenColor,

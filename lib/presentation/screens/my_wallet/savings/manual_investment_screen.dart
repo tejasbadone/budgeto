@@ -50,20 +50,18 @@ class _ManualInvestmentScreenState extends State<ManualInvestmentScreen> {
                               'Manual Investment',
                               textAlign: TextAlign.start,
                               style: TextStyle(
-                                  fontSize: 28,
-                                  color: kFontBlackC,
-                                  fontWeight: FontWeight.w400),
+                                  fontSize: 28, fontWeight: FontWeight.w400),
                             ),
                           ],
                         ),
                         SizedBox(
                           height: constraints.maxHeight * 0.02,
                         ),
-                        const Text(
+                        Text(
                           'Select risk capacity range',
                           style: TextStyle(
                               fontSize: 18,
-                              color: kGreenColor,
+                              color: Theme.of(context).primaryColor,
                               fontWeight: FontWeight.w500),
                         ),
                         SizedBox(
@@ -73,17 +71,16 @@ class _ManualInvestmentScreenState extends State<ManualInvestmentScreen> {
                           child: Text(
                             currentValue.toStringAsFixed(2),
                             style: const TextStyle(
-                                fontSize: 30,
-                                color: kFontBlackC,
-                                fontWeight: FontWeight.w400),
+                                fontSize: 30, fontWeight: FontWeight.w400),
                           ),
                         ),
                         Slider(
                             value: currentValue,
                             min: 0,
                             max: 100,
-                            activeColor: kGreenColor,
-                            inactiveColor: kGreenColor.withOpacity(0.2),
+                            activeColor: Theme.of(context).primaryColor,
+                            inactiveColor:
+                                Theme.of(context).primaryColor.withOpacity(0.2),
                             onChanged: (value) {
                               setState(() {
                                 currentValue = value;
@@ -92,11 +89,11 @@ class _ManualInvestmentScreenState extends State<ManualInvestmentScreen> {
                         SizedBox(
                           height: constraints.maxHeight * 0.05,
                         ),
-                        const Text(
+                        Text(
                           'Stocks according to risk capacity',
                           style: TextStyle(
                               fontSize: 18,
-                              color: kGreenColor,
+                              color: Theme.of(context).primaryColor,
                               fontWeight: FontWeight.w500),
                         ),
                         SizedBox(
@@ -142,7 +139,10 @@ class _ManualInvestmentScreenState extends State<ManualInvestmentScreen> {
                                           MapEntry<dynamic, dynamic> entry =
                                               list[index] as dynamic;
                                           return Card(
-                                            color: kCardColor,
+                                            shape: const RoundedRectangleBorder(
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(12.0)),
+                                            ),
                                             elevation: 0,
                                             child: ListTile(
                                               onTap: () {
@@ -160,17 +160,17 @@ class _ManualInvestmentScreenState extends State<ManualInvestmentScreen> {
                                                   ),
                                                 );
                                               },
-                                              leading: const Icon(Icons.person,
-                                                  size: 35, color: kFontBlackC),
+                                              leading: const Icon(
+                                                Icons.person,
+                                                size: 35,
+                                              ),
                                               title: Text(
                                                 entry.key.toString(),
-                                                style: const TextStyle(
-                                                    color: kFontBlackC),
+                                                style: const TextStyle(),
                                               ),
                                               trailing: Text(
                                                   entry.value.toString(),
                                                   style: const TextStyle(
-                                                      color: kFontBlackC,
                                                       fontSize: 20,
                                                       fontWeight:
                                                           FontWeight.w500)),

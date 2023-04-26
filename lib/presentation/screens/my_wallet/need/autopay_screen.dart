@@ -57,7 +57,6 @@ class _AutopayScreenState extends State<AutopayScreen> {
                                       textAlign: TextAlign.start,
                                       style: TextStyle(
                                           fontSize: 24,
-                                          color: kFontBlackC,
                                           fontWeight: FontWeight.w400),
                                     ),
                                   ],

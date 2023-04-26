@@ -29,57 +29,62 @@ class AutopayCard extends StatelessWidget {
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
         return Container(
+          decoration: BoxDecoration(
+              color: Theme.of(context).cardColor,
+              borderRadius: BorderRadius.circular(12)),
           width: double.maxFinite,
+          height: 65,
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  const Icon(
-                    Icons.currency_rupee,
-                    color: kFontBlackC,
-                  ),
-                  SizedBox(
-                    width: width,
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        transactionName,
-                        style:
-                            const TextStyle(fontSize: 16, color: kFontBlackC),
-                      ),
-                      Text(
-                        dateAndTime,
-                        style:
-                            const TextStyle(fontSize: 12, color: kFontBlackC),
-                      ),
-                    ],
-                  ),
-                  const Spacer(),
-                  Text(
-                    transactionAmount,
-                    style: TextStyle(
-                        fontSize: 18,
-                        color: amountColor,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(
-                    width: constraints.maxWidth * 0.15,
-                  ),
-                  Text(
-                    status,
-                    style: TextStyle(
-                        fontSize: 18,
-                        color: statusColor,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ],
-              ),
-              Divider(
-                thickness: 1,
-                color: kGrayTextC.withOpacity(0.15),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 12),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    const Icon(
+                      Icons.currency_rupee,
+                    ),
+                    SizedBox(
+                      width: width,
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          transactionName,
+                          style: const TextStyle(
+                            fontSize: 16,
+                          ),
+                        ),
+                        Text(
+                          dateAndTime,
+                          style: const TextStyle(
+                            fontSize: 12,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const Spacer(),
+                    Text(
+                      transactionAmount,
+                      style: TextStyle(
+                          fontSize: 18,
+                          color: amountColor,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(
+                      width: constraints.maxWidth * 0.15,
+                    ),
+                    Text(
+                      status,
+                      style: TextStyle(
+                          fontSize: 18,
+                          color: statusColor,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),

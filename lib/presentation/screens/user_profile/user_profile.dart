@@ -73,7 +73,6 @@ class _UserProfileScreeenState extends State<UserProfileScreeen> {
                                       textAlign: TextAlign.start,
                                       style: TextStyle(
                                           fontSize: 28,
-                                          color: kFontBlackC,
                                           fontWeight: FontWeight.w400),
                                     ),
                                     IconButton(
@@ -103,9 +102,10 @@ class _UserProfileScreeenState extends State<UserProfileScreeen> {
                                       decoration: BoxDecoration(
                                           border: Border.all(
                                               width: 4,
-                                              color: kTextFieldBorderC),
+                                              color:
+                                                  Theme.of(context).cardColor),
                                           shape: BoxShape.circle,
-                                          color: kGrayTextfieldC),
+                                          color: Theme.of(context).canvasColor),
                                       child: ClipRRect(
                                         borderRadius:
                                             BorderRadius.circular(100),
@@ -162,7 +162,7 @@ class _UserProfileScreeenState extends State<UserProfileScreeen> {
                                 ),
                                 TButton(
                                   constraints: constraints,
-                                  btnColor: kGreenColor,
+                                  btnColor: Theme.of(context).primaryColor,
                                   btnText: 'Sign out',
                                   onPressed: () {
                                     FirebaseAuth.instance.signOut();
@@ -178,7 +178,7 @@ class _UserProfileScreeenState extends State<UserProfileScreeen> {
                                 ),
                                 TButton(
                                   constraints: constraints,
-                                  btnColor: kGreenColor,
+                                  btnColor: Theme.of(context).primaryColor,
                                   btnText: 'Reset Password',
                                   onPressed: () {
                                     PersistentNavBarNavigator.pushNewScreen(

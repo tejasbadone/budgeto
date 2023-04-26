@@ -1,3 +1,4 @@
+import 'package:budgeto/budgeto_themes.dart';
 import 'package:budgeto/logic/autopay.dart';
 import 'package:budgeto/logic/flutter_toast.dart';
 import 'package:budgeto/presentation/screens/home_screen/add_funds_screen.dart';
@@ -146,12 +147,13 @@ class _HomeScreenState extends State<HomeScreen> {
                                       SizedBox(
                                         height: constraints.maxHeight * 0.03,
                                       ),
-                                      const Text(
+                                      Text(
                                         'Budgeto',
                                         textAlign: TextAlign.start,
                                         style: TextStyle(
                                             fontSize: 32,
-                                            color: kGreenColor,
+                                            color:
+                                                Theme.of(context).primaryColor,
                                             fontWeight: FontWeight.w600),
                                       ),
                                       SizedBox(
@@ -164,9 +166,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                                     Orientation.portrait
                                                 ? constraints.maxHeight * 0.25
                                                 : constraints.maxHeight * 0.6,
-                                            decoration: const BoxDecoration(
-                                              color: kGreenColor,
-                                              borderRadius: BorderRadius.all(
+                                            decoration: BoxDecoration(
+                                              color: Theme.of(context)
+                                                  .primaryColor,
+                                              borderRadius:
+                                                  const BorderRadius.all(
                                                 Radius.circular(20),
                                               ),
                                             ),
@@ -218,11 +222,16 @@ class _HomeScreenState extends State<HomeScreen> {
                                                       Orientation.portrait
                                                   ? constraints.maxWidth * 0.34
                                                   : constraints.maxWidth * 0.18,
-                                              decoration: const BoxDecoration(
-                                                borderRadius: BorderRadius.all(
+                                              decoration: BoxDecoration(
+                                                borderRadius:
+                                                    const BorderRadius.all(
                                                   Radius.circular(25),
                                                 ),
-                                                color: kGreenDarkC,
+                                                color: BudgetoThemes.isDarkMode(
+                                                            context) ==
+                                                        true
+                                                    ? kDarkGreenBackC
+                                                    : kGreenDarkC,
                                               ),
                                               child: Padding(
                                                 padding:
@@ -293,12 +302,17 @@ class _HomeScreenState extends State<HomeScreen> {
                                                         0.32
                                                     : constraints.maxWidth *
                                                         0.18,
-                                                decoration: const BoxDecoration(
+                                                decoration: BoxDecoration(
                                                   borderRadius:
-                                                      BorderRadius.all(
+                                                      const BorderRadius.all(
                                                     Radius.circular(25),
                                                   ),
-                                                  color: kGreenDarkC,
+                                                  color:
+                                                      BudgetoThemes.isDarkMode(
+                                                                  context) ==
+                                                              true
+                                                          ? kDarkGreenBackC
+                                                          : kGreenDarkC,
                                                 ),
                                                 child: const Padding(
                                                   padding: EdgeInsets.symmetric(

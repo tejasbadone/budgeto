@@ -67,20 +67,18 @@ class _AddNewPlanScreenState extends State<AddNewPlanScreen> {
                                 'Add new plan',
                                 textAlign: TextAlign.start,
                                 style: TextStyle(
-                                    fontSize: 28,
-                                    color: kFontBlackC,
-                                    fontWeight: FontWeight.w400),
+                                    fontSize: 28, fontWeight: FontWeight.w400),
                               ),
                             ],
                           ),
                           SizedBox(
                             height: constraints.maxHeight * 0.01,
                           ),
-                          const Text(
+                          Text(
                             'Enter plan name',
                             style: TextStyle(
                                 fontSize: 18,
-                                color: kGreenColor,
+                                color: Theme.of(context).primaryColor,
                                 fontWeight: FontWeight.w500),
                           ),
                           SizedBox(
@@ -96,11 +94,11 @@ class _AddNewPlanScreenState extends State<AddNewPlanScreen> {
                           SizedBox(
                             height: constraints.maxHeight * 0.02,
                           ),
-                          const Text(
+                          Text(
                             'Enter amount to invest',
                             style: TextStyle(
                                 fontSize: 18,
-                                color: kGreenColor,
+                                color: Theme.of(context).primaryColor,
                                 fontWeight: FontWeight.w500),
                           ),
                           SizedBox(
@@ -121,11 +119,11 @@ class _AddNewPlanScreenState extends State<AddNewPlanScreen> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              const Text(
+                              Text(
                                 'Select number of years',
                                 style: TextStyle(
                                     fontSize: 18,
-                                    color: kGreenColor,
+                                    color: Theme.of(context).primaryColor,
                                     fontWeight: FontWeight.w500),
                               ),
                               Center(
@@ -133,7 +131,6 @@ class _AddNewPlanScreenState extends State<AddNewPlanScreen> {
                                   currentValue.toStringAsFixed(2),
                                   style: const TextStyle(
                                       fontSize: 20,
-                                      color: kFontBlackC,
                                       fontWeight: FontWeight.w400),
                                 ),
                               ),
@@ -143,8 +140,10 @@ class _AddNewPlanScreenState extends State<AddNewPlanScreen> {
                               value: currentValue,
                               min: 0,
                               max: 50,
-                              activeColor: kGreenColor,
-                              inactiveColor: kGreenColor.withOpacity(0.2),
+                              activeColor: Theme.of(context).primaryColor,
+                              inactiveColor: Theme.of(context)
+                                  .primaryColor
+                                  .withOpacity(0.2),
                               onChanged: (value) {
                                 setState(() {
                                   currentValue = value;
@@ -156,11 +155,11 @@ class _AddNewPlanScreenState extends State<AddNewPlanScreen> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              const Text(
+                              Text(
                                 'Select EMI percentage split',
                                 style: TextStyle(
                                     fontSize: 18,
-                                    color: kGreenColor,
+                                    color: Theme.of(context).primaryColor,
                                     fontWeight: FontWeight.w500),
                               ),
                               Center(
@@ -168,7 +167,6 @@ class _AddNewPlanScreenState extends State<AddNewPlanScreen> {
                                   '${investmentYears.toStringAsFixed(2)} %',
                                   style: const TextStyle(
                                       fontSize: 20,
-                                      color: kFontBlackC,
                                       fontWeight: FontWeight.w400),
                                 ),
                               ),
@@ -178,8 +176,10 @@ class _AddNewPlanScreenState extends State<AddNewPlanScreen> {
                               value: investmentYears,
                               min: 0,
                               max: 50,
-                              activeColor: kGreenColor,
-                              inactiveColor: kGreenColor.withOpacity(0.2),
+                              activeColor: Theme.of(context).primaryColor,
+                              inactiveColor: Theme.of(context)
+                                  .primaryColor
+                                  .withOpacity(0.2),
                               onChanged: (value) {
                                 setState(() {
                                   investmentYears = value;
@@ -190,7 +190,7 @@ class _AddNewPlanScreenState extends State<AddNewPlanScreen> {
                           ),
                           TButton(
                               constraints: constraints,
-                              btnColor: kGreenColor,
+                              btnColor: Theme.of(context).primaryColor,
                               btnText: 'Continue',
                               onPressed: () {
                                 if (_formKey.currentState!.validate()) {

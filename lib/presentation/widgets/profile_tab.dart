@@ -40,7 +40,7 @@ class ProfileTab extends StatelessWidget {
                 ),
                 Text(
                   titleValue,
-                  style: const TextStyle(color: kFontBlackC, fontSize: 18),
+                  style: const TextStyle(fontSize: 18),
                 ),
               ],
             ),

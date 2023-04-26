@@ -157,9 +157,7 @@ class _AddExpensesPayerState extends State<AddExpensesPayer> {
                                 'Account Pay',
                                 textAlign: TextAlign.start,
                                 style: TextStyle(
-                                    fontSize: 28,
-                                    color: kFontBlackC,
-                                    fontWeight: FontWeight.w400),
+                                    fontSize: 28, fontWeight: FontWeight.w400),
                               ),
                             ],
                           ),

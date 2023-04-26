@@ -86,14 +86,15 @@ class _VerifyEmailScreenState extends State<VerifyEmailScreen> {
       : WillPopScope(
           onWillPop: () async => false,
           child: Scaffold(
-            backgroundColor: kGreenColor,
+            backgroundColor: Theme.of(context).primaryColor,
             body: SafeArea(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text(
+                  Text(
                     'A verification link has been\nsent to your email!',
-                    style: TextStyle(color: Colors.white, fontSize: 20),
+                    style: TextStyle(
+                        fontSize: 20, color: Theme.of(context).cardColor),
                     textAlign: TextAlign.center,
                   ),
                   CheckEmailWidget(

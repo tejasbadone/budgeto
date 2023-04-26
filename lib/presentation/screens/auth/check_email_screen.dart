@@ -7,8 +7,8 @@ class CheckMailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: kGreenColor,
+    return Scaffold(
+      backgroundColor: Theme.of(context).primaryColor,
       body: SafeArea(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -16,15 +16,16 @@ class CheckMailScreen extends StatelessWidget {
           Icon(
             size: 160,
             Icons.mark_email_read,
-            color: Colors.white,
+            color: Theme.of(context).cardColor,
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Center(
             child: Text(
               'We have sent you a link to\nreset the password!',
-              style: TextStyle(color: Colors.white, fontSize: 20),
+              style:
+                  TextStyle(fontSize: 20, color: Theme.of(context).cardColor),
               textAlign: TextAlign.center,
             ),
           ),

@@ -67,7 +67,6 @@ class _PlanningScreeenState extends State<PlanningScreeen> {
                                     textAlign: TextAlign.start,
                                     style: TextStyle(
                                         fontSize: 28,
-                                        color: kFontBlackC,
                                         fontWeight: FontWeight.w400),
                                   ),
                                   SizedBox(
@@ -78,7 +77,6 @@ class _PlanningScreeenState extends State<PlanningScreeen> {
                                     textAlign: TextAlign.start,
                                     style: TextStyle(
                                         fontSize: 22,
-                                        color: kFontBlackC,
                                         fontWeight: FontWeight.w400),
                                   ),
                                   SizedBox(
@@ -91,10 +89,12 @@ class _PlanningScreeenState extends State<PlanningScreeen> {
                                               ? constraints.maxHeight * 0.08
                                               : constraints.maxHeight * 0.2,
                                           width: double.maxFinite,
-                                          decoration: const BoxDecoration(
-                                              color: kGreenColor,
-                                              borderRadius: BorderRadius.all(
-                                                  Radius.circular(12))),
+                                          decoration: BoxDecoration(
+                                              color: Theme.of(context)
+                                                  .primaryColor,
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(12))),
                                           child: TextButton(
                                               onPressed: () {
                                                 Navigator.push(
@@ -131,10 +131,12 @@ class _PlanningScreeenState extends State<PlanningScreeen> {
                                               ? constraints.maxHeight * 0.08
                                               : constraints.maxHeight * 0.2,
                                           width: double.maxFinite,
-                                          decoration: const BoxDecoration(
-                                              color: kGreenColor,
-                                              borderRadius: BorderRadius.all(
-                                                  Radius.circular(12))),
+                                          decoration: BoxDecoration(
+                                              color: Theme.of(context)
+                                                  .primaryColor,
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(12))),
                                           child: TextButton(
                                               onPressed: () {
                                                 Navigator.push(
@@ -169,7 +171,6 @@ class _PlanningScreeenState extends State<PlanningScreeen> {
                                     textAlign: TextAlign.start,
                                     style: TextStyle(
                                         fontSize: 22,
-                                        color: kFontBlackC,
                                         fontWeight: FontWeight.w400),
                                   ),
                                   SizedBox(
@@ -177,7 +178,7 @@ class _PlanningScreeenState extends State<PlanningScreeen> {
                                   ),
                                   TButton(
                                       constraints: constraints,
-                                      btnColor: kGreenColor,
+                                      btnColor: Theme.of(context).primaryColor,
                                       btnText: '+ Add new plan',
                                       onPressed: () {
                                         Navigator.push(
@@ -217,9 +218,9 @@ class _PlanningScreeenState extends State<PlanningScreeen> {
     return Stack(children: [
       Container(
         height: 320,
-        decoration: const BoxDecoration(
-            color: kGreenColor,
-            borderRadius: BorderRadius.all(Radius.circular(20))),
+        decoration: BoxDecoration(
+            color: Theme.of(context).primaryColor,
+            borderRadius: const BorderRadius.all(Radius.circular(20))),
       ),
       Positioned(
         left: 35,

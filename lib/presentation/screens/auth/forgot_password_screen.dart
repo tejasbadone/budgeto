@@ -51,7 +51,7 @@ class _ForgotPassScreenState extends State<ForgotPassScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kGreenColor,
+      backgroundColor: Theme.of(context).primaryColor,
       body: SafeArea(
         child: LayoutBuilder(
           builder: (BuildContext context, BoxConstraints constraints) {
@@ -62,14 +62,12 @@ class _ForgotPassScreenState extends State<ForgotPassScreen> {
                     children: [
                       Container(
                         height: constraints.maxHeight * 0.63,
-                        color: kGreenColor,
+                        color: Theme.of(context).primaryColor,
                         child: const Center(
                           child: Text(
                             'Budgeto',
                             style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 50,
-                                fontWeight: FontWeight.bold),
+                                fontSize: 50, fontWeight: FontWeight.bold),
                           ),
                         ),
                       ),
@@ -78,9 +76,10 @@ class _ForgotPassScreenState extends State<ForgotPassScreen> {
                         child: Container(
                           padding: const EdgeInsets.symmetric(
                               vertical: 10, horizontal: 30),
-                          decoration: const BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.all(Radius.circular(25)),
+                          decoration: BoxDecoration(
+                            color: Theme.of(context).cardColor,
+                            borderRadius:
+                                const BorderRadius.all(Radius.circular(25)),
                           ),
                           child: Form(
                             key: _formKey,
@@ -92,14 +91,16 @@ class _ForgotPassScreenState extends State<ForgotPassScreen> {
                                 const Text(
                                   'Forgot Password',
                                   style: TextStyle(
-                                      fontSize: 28, color: kFontBlackC),
+                                    fontSize: 28,
+                                  ),
                                 ),
                                 SizedBox(
                                   height: constraints.maxHeight * 0.03,
                                 ),
-                                const Text(
+                                Text(
                                   'Enter the email associated with your account and we will send you link to reset the password',
-                                  style: TextStyle(color: kGreenColor),
+                                  style: TextStyle(
+                                      color: Theme.of(context).primaryColor),
                                 ),
                                 SizedBox(
                                   height: constraints.maxHeight * 0.03,
@@ -123,7 +124,7 @@ class _ForgotPassScreenState extends State<ForgotPassScreen> {
                                 TButton(
                                     loading: loading,
                                     constraints: constraints,
-                                    btnColor: kGreenColor,
+                                    btnColor: Theme.of(context).primaryColor,
                                     btnText: 'Reset Password',
                                     onPressed: () {
                                       if (_formKey.currentState!.validate()) {

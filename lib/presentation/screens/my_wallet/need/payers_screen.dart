@@ -57,7 +57,6 @@ class _PayersScreenState extends State<PayersScreen> {
                                       textAlign: TextAlign.start,
                                       style: TextStyle(
                                           fontSize: 24,
-                                          color: kFontBlackC,
                                           fontWeight: FontWeight.w400),
                                     ),
                                   ],
@@ -115,7 +114,13 @@ class _PayersScreenState extends State<PayersScreen> {
                                                       itemBuilder:
                                                           ((context, index) {
                                                         return Card(
-                                                          color: kCardColor,
+                                                          shape:
+                                                              const RoundedRectangleBorder(
+                                                            borderRadius:
+                                                                BorderRadius.all(
+                                                                    Radius.circular(
+                                                                        12.0)),
+                                                          ),
                                                           elevation: 0,
                                                           child: ListTile(
                                                             onTap: () {
@@ -139,23 +144,20 @@ class _PayersScreenState extends State<PayersScreen> {
                                                               );
                                                             },
                                                             leading: const Icon(
-                                                                Icons.person,
-                                                                size: 35,
-                                                                color:
-                                                                    kFontBlackC),
+                                                              Icons.person,
+                                                              size: 35,
+                                                            ),
                                                             title: Text(
                                                               list[index]
                                                                   ['name'],
-                                                              style: const TextStyle(
-                                                                  color:
-                                                                      kFontBlackC),
+                                                              style:
+                                                                  const TextStyle(),
                                                             ),
                                                             subtitle: Text(
                                                                 list[index][
                                                                     'accountNumber'],
-                                                                style: const TextStyle(
-                                                                    color:
-                                                                        kFontBlackC)),
+                                                                style:
+                                                                    const TextStyle()),
                                                           ),
                                                         );
                                                       }),

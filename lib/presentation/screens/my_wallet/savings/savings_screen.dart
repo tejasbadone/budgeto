@@ -60,7 +60,8 @@ class _SavingsScreenState extends State<SavingsScreen> {
                                   const Text(
                                     'Invest',
                                     style: TextStyle(
-                                        fontSize: 20, color: kFontBlackC),
+                                      fontSize: 20,
+                                    ),
                                   ),
                                   SizedBox(
                                     height: constraints.maxHeight * 0.03,
@@ -139,7 +140,8 @@ class _SavingsScreenState extends State<SavingsScreen> {
                                   const Text(
                                     'Recent Invesments',
                                     style: TextStyle(
-                                        fontSize: 20, color: kFontBlackC),
+                                      fontSize: 20,
+                                    ),
                                   ),
                                   SizedBox(
                                     height: constraints.maxHeight * 0.03,
@@ -278,9 +280,9 @@ class SavingsCard extends StatelessWidget {
     return Container(
       height: orientation == Orientation.portrait ? verHeight : horiHeight,
       width: orientation == Orientation.portrait ? verWidth : horiWidth,
-      decoration: const BoxDecoration(
-        color: kGreenColor,
-        borderRadius: BorderRadius.all(
+      decoration: BoxDecoration(
+        color: Theme.of(context).primaryColor,
+        borderRadius: const BorderRadius.all(
           Radius.circular(15),
         ),
       ),

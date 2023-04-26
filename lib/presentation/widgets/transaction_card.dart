@@ -22,53 +22,62 @@ class TransactionCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: const EdgeInsets.symmetric(vertical: 5),
       height: 65,
       width: double.maxFinite,
+      decoration: BoxDecoration(
+          color: Theme.of(context).cardColor,
+          borderRadius: BorderRadius.circular(12)),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              const Icon(
-                Icons.currency_rupee,
-                color: kFontBlackC,
-              ),
-              SizedBox(
-                width: width,
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    transactionName,
-                    style: const TextStyle(fontSize: 16, color: kFontBlackC),
-                  ),
-                  const SizedBox(
-                    height: 2,
-                  ),
-                  Text(
-                    dateAndTime,
-                    style: const TextStyle(fontSize: 12, color: kFontBlackC),
-                  ),
-                ],
-              ),
-              const Spacer(),
-              Text(
-                transactionAmount,
-                style: const TextStyle(
-                    fontSize: 18,
-                    color: kFontBlackC,
-                    fontWeight: FontWeight.bold),
-              ),
-            ],
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 18),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const Icon(
+                  Icons.currency_rupee,
+                ),
+                SizedBox(
+                  width: width,
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      transactionName,
+                      style: const TextStyle(
+                        fontSize: 16,
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 2,
+                    ),
+                    Text(
+                      dateAndTime,
+                      style: const TextStyle(
+                        fontSize: 12,
+                      ),
+                    ),
+                  ],
+                ),
+                const Spacer(),
+                Text(
+                  transactionAmount,
+                  style: const TextStyle(
+                      fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
           ),
-          const SizedBox(
-            height: 6,
-          ),
-          Divider(
-            thickness: 1,
-            color: kGrayTextC.withOpacity(0.15),
-          ),
+          // const SizedBox(
+          //   height: 6,
+          // ),
+          // Divider(
+          //   thickness: 1,
+          //   color: kGrayTextC.withOpacity(0.15),
+          // ),
         ],
       ),
     );

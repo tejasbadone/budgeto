@@ -66,7 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
       },
       child: Scaffold(
         // resizeToAvoidBottomInset: false,
-        backgroundColor: kGreenColor,
+        backgroundColor: Theme.of(context).primaryColor,
         body: SafeArea(
           child: LayoutBuilder(
             builder: (BuildContext context, BoxConstraints constraints) {
@@ -82,9 +82,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           child: Text(
                             'Budgeto',
                             style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 50,
-                                fontWeight: FontWeight.bold),
+                                fontSize: 50, fontWeight: FontWeight.bold),
                           ),
                         ),
                         SizedBox(
@@ -98,10 +96,10 @@ class _LoginScreenState extends State<LoginScreen> {
                                 padding: const EdgeInsets.symmetric(
                                     vertical: 20, horizontal: 30),
 
-                                decoration: const BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(30)),
+                                decoration: BoxDecoration(
+                                  color: Theme.of(context).cardColor,
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(30)),
                                 ),
                                 // color: Colors.white,
                                 child: Form(
@@ -117,7 +115,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                       const Text(
                                         'Log in\nto your account',
                                         style: TextStyle(
-                                            fontSize: 30, color: kFontBlackC),
+                                          fontSize: 30,
+                                        ),
                                       ),
                                       SizedBox(
                                         height: constraints.maxHeight * 0.025,
@@ -161,7 +160,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                       TButton(
                                         loading: loading,
                                         constraints: constraints,
-                                        btnColor: kGreenColor,
+                                        btnColor:
+                                            Theme.of(context).primaryColor,
                                         btnText: 'Login',
                                         onPressed: () {
                                           if (_formKey.currentState!
@@ -183,10 +183,11 @@ class _LoginScreenState extends State<LoginScreen> {
                                                 fontWeight: FontWeight.w400),
                                           ),
                                           TextButton(
-                                            child: const Text(
+                                            child: Text(
                                               'Register',
                                               style: TextStyle(
-                                                  color: kGreenColor,
+                                                  color: Theme.of(context)
+                                                      .primaryColor,
                                                   fontSize: 16),
                                             ),
                                             onPressed: () {
@@ -200,10 +201,12 @@ class _LoginScreenState extends State<LoginScreen> {
                                         ],
                                       ),
                                       TextButton(
-                                        child: const Text(
+                                        child: Text(
                                           'Forgot Password?',
                                           style: TextStyle(
-                                              color: kGreenColor, fontSize: 16),
+                                              color: Theme.of(context)
+                                                  .primaryColor,
+                                              fontSize: 16),
                                         ),
                                         onPressed: () {
                                           Navigator.push(

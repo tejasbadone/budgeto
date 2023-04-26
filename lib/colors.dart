@@ -10,3 +10,9 @@ const kGrayTextfieldC = Color(0xffF7F8F9);
 const kGreenDarkC = Color(0xff137E75);
 const kCardColor = Color(0xffEDF1F0);
 const kGreenNavC = Color(0xff085E57);
+
+const kDarkScaffoldC = Color(0xff121418);
+const kDarkCardC = Color(0xff1B1F24);
+const kDarkGreenColor = Color(0xff198786);
+const kDarkGreenBackC = Color(0xff027273);
+const kDarkGreenNavIconC = Color.fromARGB(255, 0, 91, 93);

@@ -19,10 +19,10 @@ class CheckEmailWidget extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Icon(
+        Icon(
           size: 150,
           Icons.mark_email_read,
-          color: Colors.white,
+          color: Theme.of(context).cardColor,
         ),
         const SizedBox(
           height: 10,
@@ -30,7 +30,7 @@ class CheckEmailWidget extends StatelessWidget {
         Center(
           child: Text(
             mailText,
-            style: const TextStyle(color: Colors.white, fontSize: 18),
+            style: TextStyle(fontSize: 18, color: Theme.of(context).cardColor),
             textAlign: TextAlign.center,
           ),
         ),
@@ -38,9 +38,9 @@ class CheckEmailWidget extends StatelessWidget {
           height: 15,
         ),
         Container(
-          decoration: const BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.all(Radius.circular(12)),
+          decoration: BoxDecoration(
+            color: Theme.of(context).cardColor,
+            borderRadius: const BorderRadius.all(Radius.circular(12)),
           ),
           height: 50,
           width: 150,
@@ -48,7 +48,8 @@ class CheckEmailWidget extends StatelessWidget {
             onPressed: onPressed,
             child: Text(
               btnText,
-              style: const TextStyle(color: kGreenColor, fontSize: 16),
+              style: TextStyle(
+                  color: Theme.of(context).primaryColor, fontSize: 16),
             ),
           ),
         )

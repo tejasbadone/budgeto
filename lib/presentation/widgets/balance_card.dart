@@ -17,9 +17,9 @@ class BalanceCard extends StatelessWidget {
     return Stack(children: [
       Container(
         height: constraints,
-        decoration: const BoxDecoration(
-            color: kGreenColor,
-            borderRadius: BorderRadius.all(Radius.circular(20))),
+        decoration: BoxDecoration(
+            color: Theme.of(context).primaryColor,
+            borderRadius: const BorderRadius.all(Radius.circular(20))),
       ),
       const Positioned(
         left: 35,

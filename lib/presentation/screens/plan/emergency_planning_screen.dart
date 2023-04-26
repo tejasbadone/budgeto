@@ -144,9 +144,7 @@ class _EmergencyPlanningScreenState extends State<EmergencyPlanningScreen> {
                                 'Emergency funds plan',
                                 textAlign: TextAlign.start,
                                 style: TextStyle(
-                                    fontSize: 28,
-                                    color: kFontBlackC,
-                                    fontWeight: FontWeight.w400),
+                                    fontSize: 28, fontWeight: FontWeight.w400),
                               ),
                             ],
                           ),
@@ -163,7 +161,9 @@ class _EmergencyPlanningScreenState extends State<EmergencyPlanningScreen> {
                           ),
                           const Text(
                             'Enter multiple of expenses',
-                            style: TextStyle(fontSize: 18, color: kFontBlackC),
+                            style: TextStyle(
+                              fontSize: 18,
+                            ),
                           ),
                           SizedBox(
                             height: constraints.maxHeight * 0.02,
@@ -182,7 +182,9 @@ class _EmergencyPlanningScreenState extends State<EmergencyPlanningScreen> {
                           ),
                           const Text(
                             'Enter the EMI amount',
-                            style: TextStyle(fontSize: 18, color: kFontBlackC),
+                            style: TextStyle(
+                              fontSize: 18,
+                            ),
                           ),
                           SizedBox(
                             height: constraints.maxHeight * 0.02,
@@ -201,7 +203,7 @@ class _EmergencyPlanningScreenState extends State<EmergencyPlanningScreen> {
                           ),
                           TButton(
                               constraints: constraints,
-                              btnColor: kGreenColor,
+                              btnColor: Theme.of(context).primaryColor,
                               btnText: 'Activate',
                               onPressed: () {
                                 if (_formKey.currentState!.validate()) {

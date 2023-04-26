@@ -26,11 +26,11 @@ class CustomCard extends StatelessWidget {
     return Container(
       height: orientation == Orientation.portrait ? verHeight : horiHeight,
       width: orientation == Orientation.portrait ? verWidth : horiWidth,
-      decoration: const BoxDecoration(
-        borderRadius: BorderRadius.all(
+      decoration: BoxDecoration(
+        borderRadius: const BorderRadius.all(
           Radius.circular(20),
         ),
-        color: kCardColor,
+        color: Theme.of(context).cardColor,
       ),
       child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
@@ -40,9 +40,9 @@ class CustomCard extends StatelessWidget {
             children: [
               Text(
                 cardTitle,
-                style: const TextStyle(
+                style: TextStyle(
                     fontSize: 22,
-                    color: kGreenColor,
+                    color: Theme.of(context).primaryColor,
                     fontWeight: FontWeight.w500),
               ),
               const SizedBox(
@@ -50,21 +50,17 @@ class CustomCard extends StatelessWidget {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                // mainAxisSize: MainAxisSize.min,
                 children: [
                   const Icon(
                     Icons.currency_rupee,
                     size: 25,
-                    color: kFontBlackC,
                   ),
                   SizedBox(
                     height: 35,
                     child: Text(
                       cardBalance,
                       style: const TextStyle(
-                          fontSize: 24,
-                          color: kFontBlackC,
-                          fontWeight: FontWeight.w500),
+                          fontSize: 24, fontWeight: FontWeight.w500),
                     ),
                   ),
                 ],

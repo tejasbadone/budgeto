@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
+import '../../budgeto_themes.dart';
 import '../screens/auth/login_screen.dart';
 
 import '../screens/plan/planning_screen.dart';
@@ -33,23 +34,26 @@ class _BottomNavState extends State<BottomNav> {
   }
 
   List<PersistentBottomNavBarItem> _navBarItem() {
+    dynamic navBarColor = BudgetoThemes.isDarkMode(context) == true
+        ? kDarkGreenNavIconC
+        : kGreenNavC;
     return [
       PersistentBottomNavBarItem(
-        inactiveColorPrimary: kGreenNavC,
-        activeColorPrimary: kGreenNavC,
+        inactiveColorPrimary: navBarColor,
+        activeColorPrimary: navBarColor,
         icon: const Icon(Icons.home),
       ),
       PersistentBottomNavBarItem(
-          inactiveColorPrimary: kGreenNavC,
-          activeColorPrimary: kGreenNavC,
+          inactiveColorPrimary: navBarColor,
+          activeColorPrimary: navBarColor,
           icon: const Icon(Icons.account_balance_wallet)),
       PersistentBottomNavBarItem(
-          inactiveColorPrimary: kGreenNavC,
-          activeColorPrimary: kGreenNavC,
+          inactiveColorPrimary: navBarColor,
+          activeColorPrimary: navBarColor,
           icon: const Icon(Icons.article)),
       PersistentBottomNavBarItem(
-          inactiveColorPrimary: kGreenNavC,
-          activeColorPrimary: kGreenNavC,
+          inactiveColorPrimary: navBarColor,
+          activeColorPrimary: navBarColor,
           icon: const Icon(Icons.person)),
     ];
   }
@@ -68,13 +72,15 @@ class _BottomNavState extends State<BottomNav> {
               items: _navBarItem(),
               controller: controller,
               navBarHeight: 60,
-              decoration: const NavBarDecoration(
-                  colorBehindNavBar: kGreenColor,
-                  borderRadius: BorderRadius.only(
+              decoration: NavBarDecoration(
+                  colorBehindNavBar: BudgetoThemes.isDarkMode(context) == true
+                      ? kDarkGreenBackC
+                      : kGreenDarkC,
+                  borderRadius: const BorderRadius.only(
                       topLeft: Radius.circular(15),
                       topRight: Radius.circular(15))),
               padding: const NavBarPadding.all(0),
-              backgroundColor: kGreenColor,
+              backgroundColor: Theme.of(context).primaryColor,
               navBarStyle: NavBarStyle.style3,
               itemAnimationProperties: const ItemAnimationProperties(
                 duration: Duration(milliseconds: 400),

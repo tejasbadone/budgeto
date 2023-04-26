@@ -166,16 +166,14 @@ class _AddFundsScreenState extends State<AddFundsScreen> {
                                 'Add Funds',
                                 textAlign: TextAlign.start,
                                 style: TextStyle(
-                                    fontSize: 28,
-                                    color: kFontBlackC,
-                                    fontWeight: FontWeight.w400),
+                                    fontSize: 28, fontWeight: FontWeight.w400),
                               ),
                             ],
                           ),
                           SizedBox(height: constraints.maxHeight * 0.02),
                           const Text(
                             'Enter amount',
-                            style: TextStyle(color: kFontBlackC, fontSize: 18),
+                            style: TextStyle(fontSize: 18),
                             textAlign: TextAlign.start,
                           ),
                           SizedBox(height: constraints.maxHeight * 0.02),
@@ -191,7 +189,7 @@ class _AddFundsScreenState extends State<AddFundsScreen> {
                           SizedBox(height: constraints.maxHeight * 0.02),
                           const Text(
                             'Enter the percentage split for Needs',
-                            style: TextStyle(color: kFontBlackC, fontSize: 18),
+                            style: TextStyle(fontSize: 18),
                             textAlign: TextAlign.start,
                           ),
                           SizedBox(height: constraints.maxHeight * 0.02),
@@ -207,7 +205,7 @@ class _AddFundsScreenState extends State<AddFundsScreen> {
                           SizedBox(height: constraints.maxHeight * 0.02),
                           const Text(
                             'Enter the percentage split for Expenses',
-                            style: TextStyle(color: kFontBlackC, fontSize: 18),
+                            style: TextStyle(fontSize: 18),
                             textAlign: TextAlign.start,
                           ),
                           SizedBox(height: constraints.maxHeight * 0.02),
@@ -223,7 +221,7 @@ class _AddFundsScreenState extends State<AddFundsScreen> {
                           SizedBox(height: constraints.maxHeight * 0.02),
                           const Text(
                             'Enter the percentage split for Savings',
-                            style: TextStyle(color: kFontBlackC, fontSize: 18),
+                            style: TextStyle(fontSize: 18),
                             textAlign: TextAlign.start,
                           ),
                           SizedBox(height: constraints.maxHeight * 0.02),
@@ -245,7 +243,7 @@ class _AddFundsScreenState extends State<AddFundsScreen> {
                           SizedBox(height: constraints.maxHeight * 0.04),
                           TButton(
                               constraints: constraints,
-                              btnColor: kGreenColor,
+                              btnColor: Theme.of(context).primaryColor,
                               btnText: 'Add',
                               onPressed: () async {
                                 add();

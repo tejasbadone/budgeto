@@ -99,7 +99,7 @@ class _NeedScreenState extends State<NeedScreen> {
                                   ),
                                   TButton(
                                       constraints: constraints,
-                                      btnColor: kGreenColor,
+                                      btnColor: Theme.of(context).primaryColor,
                                       btnText: '+ New Payment',
                                       onPressed: () {
                                         Navigator.push(
@@ -128,9 +128,7 @@ class _NeedScreenState extends State<NeedScreen> {
                                           orientation: orientation,
                                           constraints: constraints,
                                           iconName: Icons.schedule,
-                                          iconColor: Colors.white,
                                           title: 'Autopays',
-                                          fontColor: Colors.white,
                                           verHeight:
                                               constraints.maxHeight * 0.15,
                                           horiHeight:
@@ -138,7 +136,6 @@ class _NeedScreenState extends State<NeedScreen> {
                                           verWidth:
                                               constraints.maxHeight * 0.22,
                                           horiWidth: constraints.maxWidth * 0.4,
-                                          backColor: kGreenColor,
                                         ),
                                       ),
                                       GestureDetector(
@@ -152,9 +149,6 @@ class _NeedScreenState extends State<NeedScreen> {
                                         child: CardAlt(
                                           orientation: orientation,
                                           constraints: constraints,
-                                          iconColor: Colors.white,
-                                          fontColor: Colors.white,
-                                          backColor: kGreenColor,
                                           iconName: Icons.groups,
                                           title: 'Payers',
                                           verHeight:

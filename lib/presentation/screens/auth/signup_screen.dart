@@ -75,7 +75,7 @@ class _SignupScreenState extends State<SignupScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kGreenColor,
+      backgroundColor: Theme.of(context).primaryColor,
       body: SafeArea(
         child: LayoutBuilder(
           builder: (BuildContext context, BoxConstraints constraints) {
@@ -86,14 +86,12 @@ class _SignupScreenState extends State<SignupScreen> {
                     children: [
                       Container(
                         height: constraints.maxHeight * 0.45,
-                        color: kGreenColor,
+                        color: Theme.of(context).primaryColor,
                         child: const Center(
                           child: Text(
-                            'FiMantra',
+                            'Budgeto',
                             style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 50,
-                                fontWeight: FontWeight.bold),
+                                fontSize: 50, fontWeight: FontWeight.bold),
                           ),
                         ),
                       ),
@@ -102,11 +100,11 @@ class _SignupScreenState extends State<SignupScreen> {
                         child: Container(
                           padding: const EdgeInsets.symmetric(
                               vertical: 8, horizontal: 30),
-                          // height: constraints.maxHeight * 0.65,
-                          // width: constraints.maxWidth,
-                          decoration: const BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.all(Radius.circular(25)),
+
+                          decoration: BoxDecoration(
+                            color: Theme.of(context).cardColor,
+                            borderRadius:
+                                const BorderRadius.all(Radius.circular(25)),
                           ),
                           // color: Colors.white,
                           child: Form(
@@ -119,7 +117,8 @@ class _SignupScreenState extends State<SignupScreen> {
                                 const Text(
                                   'Create Account',
                                   style: TextStyle(
-                                      fontSize: 28, color: kFontBlackC),
+                                    fontSize: 28,
+                                  ),
                                 ),
                                 SizedBox(
                                   height: constraints.maxHeight * 0.025,
@@ -189,7 +188,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                 TButton(
                                   loading: loading,
                                   constraints: constraints,
-                                  btnColor: kGreenColor,
+                                  btnColor: Theme.of(context).primaryColor,
                                   btnText: 'Continue',
                                   onPressed: signup,
                                 ),
@@ -213,9 +212,10 @@ class _SignupScreenState extends State<SignupScreen> {
                                                   builder: (context) =>
                                                       const LoginScreen()));
                                         },
-                                        child: const Text('Login',
+                                        child: Text('Login',
                                             style: TextStyle(
-                                              color: kGreenColor,
+                                              color: Theme.of(context)
+                                                  .primaryColor,
                                               fontSize: 16,
                                             )))
                                   ],

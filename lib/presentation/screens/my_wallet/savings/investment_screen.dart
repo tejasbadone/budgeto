@@ -112,9 +112,7 @@ class _InvestmentScreenState extends State<InvestmentScreen> {
                               'Invest',
                               textAlign: TextAlign.start,
                               style: TextStyle(
-                                  fontSize: 28,
-                                  color: kFontBlackC,
-                                  fontWeight: FontWeight.w400),
+                                  fontSize: 28, fontWeight: FontWeight.w400),
                             ),
                           ],
                         ),
@@ -124,39 +122,47 @@ class _InvestmentScreenState extends State<InvestmentScreen> {
                         const Center(
                           child: Text(
                             'Investment Details',
-                            style: TextStyle(fontSize: 20, color: kFontBlackC),
+                            style: TextStyle(
+                              fontSize: 20,
+                            ),
                           ),
                         ),
                         SizedBox(
                           height: constraints.maxHeight * 0.04,
                         ),
-                        const Text(
+                        Text(
                           'Company name',
-                          style: TextStyle(fontSize: 22, color: kGreenColor),
+                          style: TextStyle(
+                              fontSize: 22,
+                              color: Theme.of(context).primaryColor),
                         ),
                         Text(
                           widget.companyName,
-                          style:
-                              const TextStyle(fontSize: 24, color: kFontBlackC),
+                          style: const TextStyle(
+                            fontSize: 24,
+                          ),
                         ),
                         SizedBox(
                           height: constraints.maxHeight * 0.02,
                         ),
-                        const Text(
+                        Text(
                           'Amount',
-                          style: TextStyle(fontSize: 22, color: kGreenColor),
+                          style: TextStyle(
+                              fontSize: 22,
+                              color: Theme.of(context).primaryColor),
                         ),
                         Text(
                           widget.investmentAmount,
-                          style:
-                              const TextStyle(fontSize: 24, color: kFontBlackC),
+                          style: const TextStyle(
+                            fontSize: 24,
+                          ),
                         ),
                         SizedBox(
                           height: constraints.maxHeight * 0.05,
                         ),
                         TButton(
                             constraints: constraints,
-                            btnColor: kGreenColor,
+                            btnColor: Theme.of(context).primaryColor,
                             btnText: 'Invest',
                             onPressed: invest)
                       ],

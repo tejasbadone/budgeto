@@ -133,9 +133,7 @@ class _CarPlanningScreenState extends State<CarPlanningScreen> {
                                 'Car plan',
                                 textAlign: TextAlign.start,
                                 style: TextStyle(
-                                    fontSize: 28,
-                                    color: kFontBlackC,
-                                    fontWeight: FontWeight.w400),
+                                    fontSize: 28, fontWeight: FontWeight.w400),
                               ),
                             ],
                           ),
@@ -152,7 +150,9 @@ class _CarPlanningScreenState extends State<CarPlanningScreen> {
                           ),
                           const Text(
                             'Enter price of the car',
-                            style: TextStyle(fontSize: 18, color: kFontBlackC),
+                            style: TextStyle(
+                              fontSize: 18,
+                            ),
                           ),
                           SizedBox(
                             height: constraints.maxHeight * 0.02,
@@ -168,7 +168,9 @@ class _CarPlanningScreenState extends State<CarPlanningScreen> {
                           ),
                           const Text(
                             'Enter the percentage to get target amount',
-                            style: TextStyle(fontSize: 18, color: kFontBlackC),
+                            style: TextStyle(
+                              fontSize: 18,
+                            ),
                           ),
                           SizedBox(
                             height: constraints.maxHeight * 0.02,
@@ -187,7 +189,9 @@ class _CarPlanningScreenState extends State<CarPlanningScreen> {
                           ),
                           const Text(
                             'Enter EMI amount',
-                            style: TextStyle(fontSize: 18, color: kFontBlackC),
+                            style: TextStyle(
+                              fontSize: 18,
+                            ),
                           ),
                           SizedBox(
                             height: constraints.maxHeight * 0.02,
@@ -203,7 +207,7 @@ class _CarPlanningScreenState extends State<CarPlanningScreen> {
                           ),
                           TButton(
                             constraints: constraints,
-                            btnColor: kGreenColor,
+                            btnColor: Theme.of(context).primaryColor,
                             btnText: 'Activate',
                             onPressed: () {
                               if (_formKey.currentState!.validate()) {

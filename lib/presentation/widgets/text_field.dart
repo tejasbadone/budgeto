@@ -25,28 +25,21 @@ class CustomTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       style: const TextStyle(color: kGrayTextC),
+      cursorColor: Theme.of(context).primaryColor,
       keyboardType: keyboardType,
       inputFormatters: inputFormatters,
       obscureText: obscureText,
       controller: controller,
       validator: validator,
       decoration: InputDecoration(
-        prefixIcon: Icon(color: kGrayC, size: 18, iconName),
-        hintText: hint,
-        hintStyle: const TextStyle(fontSize: 16, color: kGrayC),
-        filled: true,
-        fillColor: kTextFieldColor,
-        hoverColor: kGreenColor,
-        focusColor: kTextFieldColor,
-        focusedBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: kTextFieldBorderC),
-          borderRadius: BorderRadius.circular(12),
-        ),
-        enabledBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: kTextFieldBorderC),
-          borderRadius: BorderRadius.circular(12),
-        ),
-      ),
+          prefixIcon: Icon(color: kGrayC, size: 18, iconName),
+          hintText: hint,
+          hintStyle: const TextStyle(fontSize: 16, color: kGrayC),
+          filled: true,
+          hoverColor: kGreenColor,
+          focusColor: kTextFieldColor,
+          focusedBorder: Theme.of(context).inputDecorationTheme.focusedBorder,
+          enabledBorder: Theme.of(context).inputDecorationTheme.enabledBorder),
     );
   }
 }

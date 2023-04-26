@@ -109,9 +109,7 @@ class _NeedPayersPayScreenState extends State<NeedPayersPayScreen> {
                           'Pay Now',
                           textAlign: TextAlign.start,
                           style: TextStyle(
-                              fontSize: 28,
-                              color: kFontBlackC,
-                              fontWeight: FontWeight.w400),
+                              fontSize: 28, fontWeight: FontWeight.w400),
                         ),
                         SizedBox(
                           height: constraints.maxHeight * 0.02,
@@ -119,7 +117,9 @@ class _NeedPayersPayScreenState extends State<NeedPayersPayScreen> {
                         const Center(
                           child: Text(
                             'Payment Details',
-                            style: TextStyle(fontSize: 20, color: kFontBlackC),
+                            style: TextStyle(
+                              fontSize: 20,
+                            ),
                           ),
                         ),
                         SizedBox(
@@ -131,8 +131,9 @@ class _NeedPayersPayScreenState extends State<NeedPayersPayScreen> {
                         ),
                         Text(
                           widget.name,
-                          style:
-                              const TextStyle(fontSize: 24, color: kFontBlackC),
+                          style: const TextStyle(
+                            fontSize: 24,
+                          ),
                         ),
                         SizedBox(
                           height: constraints.maxHeight * 0.02,
@@ -143,8 +144,9 @@ class _NeedPayersPayScreenState extends State<NeedPayersPayScreen> {
                         ),
                         Text(
                           widget.accountNumber,
-                          style:
-                              const TextStyle(fontSize: 24, color: kFontBlackC),
+                          style: const TextStyle(
+                            fontSize: 24,
+                          ),
                         ),
                         SizedBox(
                           height: constraints.maxHeight * 0.02,
@@ -189,7 +191,7 @@ class _NeedPayersPayScreenState extends State<NeedPayersPayScreen> {
                         ),
                         TButton(
                             constraints: constraints,
-                            btnColor: kGreenColor,
+                            btnColor: Theme.of(context).primaryColor,
                             btnText: 'Pay Now',
                             onPressed: _addAndPay)
                       ],
