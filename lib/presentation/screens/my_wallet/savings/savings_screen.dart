@@ -192,9 +192,15 @@ class _SavingsScreenState extends State<SavingsScreen> {
                                                 children: [
                                                   Expanded(
                                                     child: SizedBox(
-                                                      height: constraints
-                                                              .maxHeight *
-                                                          0.4,
+                                                      height: orientation ==
+                                                              Orientation
+                                                                  .portrait
+                                                          ? constraints
+                                                                  .maxHeight *
+                                                              0.4
+                                                          : constraints
+                                                                  .maxHeight *
+                                                              0.7,
                                                       child: ListView.builder(
                                                           itemCount: snapshot
                                                               .data!

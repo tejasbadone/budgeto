@@ -1,5 +1,24 @@
 import 'package:budgeto/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
+
+class ThemeSwitch extends ChangeNotifier {
+  ThemeMode themeMode = ThemeMode.system;
+
+  bool get isDarkMode {
+    if (themeMode == ThemeMode.system) {
+      final brightness = SchedulerBinding.instance.window.platformBrightness;
+      return brightness == Brightness.dark;
+    } else {
+      return themeMode == ThemeMode.dark;
+    }
+  }
+
+  void switchTheme(bool isOn) {
+    themeMode = isOn ? ThemeMode.dark : ThemeMode.light;
+    notifyListeners();
+  }
+}
 
 class BudgetoThemes {
   static final lightTheme = ThemeData(

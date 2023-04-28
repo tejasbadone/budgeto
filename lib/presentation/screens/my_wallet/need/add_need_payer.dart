@@ -432,7 +432,7 @@ class _AddNeedPayerState extends State<AddNeedPayer> {
                           ),
                           TButton(
                               constraints: constraints,
-                              btnColor: kGreenColor,
+                              btnColor: Theme.of(context).primaryColor,
                               btnText: 'Add Autopay',
                               onPressed: _addAutopay),
                           SizedBox(
@@ -440,7 +440,7 @@ class _AddNeedPayerState extends State<AddNeedPayer> {
                           ),
                           TButton(
                               constraints: constraints,
-                              btnColor: kGreenColor,
+                              btnColor: Theme.of(context).primaryColor,
                               btnText: 'Add & Pay',
                               onPressed: _addAndPay),
                           SizedBox(

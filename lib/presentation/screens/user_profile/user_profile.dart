@@ -1,3 +1,4 @@
+import 'package:budgeto/budgeto_themes.dart';
 import 'package:budgeto/colors.dart';
 import 'package:budgeto/presentation/screens/auth/forgot_password_screen.dart';
 import 'package:budgeto/presentation/screens/user_profile/update_account_screen.dart';
@@ -6,9 +7,11 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
+import 'package:provider/provider.dart';
 import '../../widgets/button.dart';
 import '../../widgets/null_error_message_widget.dart';
 import '../auth/login_screen.dart';
+import 'package:flutter_switch/flutter_switch.dart';
 
 class UserProfileScreeen extends StatefulWidget {
   const UserProfileScreeen({super.key});
@@ -158,7 +161,20 @@ class _UserProfileScreeenState extends State<UserProfileScreeen> {
                                     iconName: Icons.currency_rupee,
                                     titleValue: map['incomeRange']),
                                 SizedBox(
-                                  height: constraints.maxHeight * 0.03,
+                                  height: constraints.maxHeight * 0.01,
+                                ),
+                                Row(
+                                  children: [
+                                    const Text(
+                                      'Dark Mode',
+                                      style: TextStyle(fontSize: 18),
+                                    ),
+                                    const Spacer(),
+                                    themeSwitch(context)
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: constraints.maxHeight * 0.04,
                                 ),
                                 TButton(
                                   constraints: constraints,
@@ -211,6 +227,40 @@ class _UserProfileScreeenState extends State<UserProfileScreeen> {
           );
         }
       }),
+    );
+  }
+
+  FlutterSwitch themeSwitch(BuildContext context) {
+    final switchThemeIns = Provider.of<ThemeSwitch>(context);
+    return FlutterSwitch(
+      width: 50,
+      height: 30,
+      padding: 0,
+      activeToggleColor: kDarkCardC,
+      inactiveToggleColor: Theme.of(context).primaryColor,
+      activeSwitchBorder: Border.all(
+        color: kDarkGreenBackC,
+        width: 4,
+      ),
+      inactiveSwitchBorder: Border.all(
+        color: kTextFieldBorderC,
+        width: 4,
+      ),
+      activeColor: kDarkGreenColor,
+      inactiveColor: kTextFieldColor,
+      activeIcon: Icon(
+        Icons.nightlight_round,
+        color: Theme.of(context).primaryColor,
+      ),
+      inactiveIcon: const Icon(
+        Icons.wb_sunny,
+        color: kTextFieldColor,
+      ),
+      value: switchThemeIns.isDarkMode,
+      onToggle: (value) {
+        final provider = Provider.of<ThemeSwitch>(context, listen: false);
+        provider.switchTheme(value);
+      },
     );
   }
 }

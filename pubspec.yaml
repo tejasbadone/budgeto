@@ -37,6 +37,8 @@ dependencies:
   firebase_storage: ^11.0.15
   flutter:
     sdk: flutter
+  flutter_launcher_icons: ^0.13.1
+  flutter_switch: ^0.3.2
   fluttertoast: ^8.2.1
   image_picker: ^0.8.7
   persistent_bottom_nav_bar: ^5.0.2
@@ -46,6 +48,13 @@ dev_dependencies:
   flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
+
+
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/app_icon.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
