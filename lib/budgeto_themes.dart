@@ -22,6 +22,7 @@ class ThemeSwitch extends ChangeNotifier {
 
 class BudgetoThemes {
   static final lightTheme = ThemeData(
+    canvasColor: kCardColor,
     textTheme: const TextTheme(
         bodyLarge: TextStyle(color: kFontBlackC),
         bodyMedium: TextStyle(color: kFontBlackC),
@@ -46,6 +47,7 @@ class BudgetoThemes {
   );
 
   static final darkTheme = ThemeData(
+      canvasColor: kDarkCardC,
       datePickerTheme: const DatePickerThemeData(
           todayBorder: BorderSide(color: kDarkGreenColor),
           rangePickerSurfaceTintColor: kDarkGreenColor),
