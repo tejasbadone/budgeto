@@ -67,8 +67,11 @@ class _UpdateAccountScreenState extends State<UpdateAccountScreen> {
       'age': ageController.text.toString(),
       'incomeRange': dropdownValue,
     }).then((value) {
-      Navigator.pop(
-          context, MaterialPageRoute(builder: (context) => const BottomNav()));
+      Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(builder: (context) => const BottomNav()),
+        (route) => false,
+      );
       ToastMessage().toastMessage('Updated!', Colors.green);
       setState(() {
         loading = false;
