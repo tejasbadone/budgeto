@@ -220,7 +220,7 @@ class _AddExpensesPayerState extends State<AddExpensesPayer> {
                           ),
                           TButton(
                               constraints: constraints,
-                              btnColor: kGreenColor,
+                              btnColor: Theme.of(context).primaryColor,
                               btnText: 'Pay Now',
                               onPressed: _addAndPay),
                           SizedBox(

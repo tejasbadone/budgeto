@@ -67,7 +67,9 @@ class _ForgotPassScreenState extends State<ForgotPassScreen> {
                           child: Text(
                             'Budgeto',
                             style: TextStyle(
-                                fontSize: 50, fontWeight: FontWeight.bold),
+                                fontSize: 50,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
                           ),
                         ),
                       ),

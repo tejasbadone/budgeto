@@ -82,7 +82,9 @@ class _LoginScreenState extends State<LoginScreen> {
                           child: Text(
                             'Budgeto',
                             style: TextStyle(
-                                fontSize: 50, fontWeight: FontWeight.bold),
+                                fontSize: 50,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
                           ),
                         ),
                         SizedBox(
