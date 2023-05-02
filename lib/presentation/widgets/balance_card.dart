@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../colors.dart';
-
 class BalanceCard extends StatelessWidget {
   const BalanceCard({
     super.key,

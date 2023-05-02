@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../colors.dart';
-
 class CheckEmailWidget extends StatelessWidget {
   const CheckEmailWidget({
     required this.mailText,

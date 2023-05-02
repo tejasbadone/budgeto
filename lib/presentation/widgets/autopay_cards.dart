@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-import '../../colors.dart';
-
 class AutopayCard extends StatelessWidget {
   const AutopayCard(
       {super.key,

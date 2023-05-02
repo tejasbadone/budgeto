@@ -1,4 +1,3 @@
-import 'package:budgeto/colors.dart';
 import 'package:budgeto/logic/flutter_toast.dart';
 import 'package:budgeto/presentation/screens/auth/check_email_screen.dart';
 

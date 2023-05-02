@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-import '../../colors.dart';
-
 class TransactionCard extends StatelessWidget {
   const TransactionCard({
     super.key,

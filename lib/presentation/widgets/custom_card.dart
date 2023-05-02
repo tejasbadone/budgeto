@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../colors.dart';
-
 class CustomCard extends StatelessWidget {
   const CustomCard(
       {super.key,
