@@ -33,7 +33,7 @@ class _BottomNavState extends State<BottomNav> {
     ];
   }
 
-  List<PersistentBottomNavBarItem> _navBarItem() {
+  List<PersistentBottomNavBarItem> navBarItem() {
     dynamic navBarColor = BudgetoThemes.isDarkMode(context) == true
         ? kDarkGreenNavIconC
         : kGreenNavC;
@@ -69,7 +69,7 @@ class _BottomNavState extends State<BottomNav> {
             return PersistentTabView(
               context,
               screens: _buildScreen(),
-              items: _navBarItem(),
+              items: navBarItem(),
               controller: controller,
               navBarHeight: 60,
               decoration: NavBarDecoration(

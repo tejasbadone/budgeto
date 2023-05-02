@@ -109,7 +109,8 @@ class _CarPlanningScreenState extends State<CarPlanningScreen> {
               builder: (BuildContext context, Orientation orientation) {
                 return SingleChildScrollView(
                   child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 20, vertical: 15),
                     child: Form(
                       key: _formKey,
                       child: Column(

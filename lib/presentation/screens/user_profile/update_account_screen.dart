@@ -1,12 +1,12 @@
 import 'package:budgeto/colors.dart';
 import 'package:budgeto/logic/profile_controller.dart';
-import 'package:budgeto/presentation/widgets/bottom_navbar.dart';
 import 'package:budgeto/presentation/widgets/button.dart';
 import 'package:budgeto/presentation/widgets/text_field.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
 import 'package:provider/provider.dart';
 import 'dart:io';
 import '../../../logic/flutter_toast.dart';
@@ -67,11 +67,15 @@ class _UpdateAccountScreenState extends State<UpdateAccountScreen> {
       'age': ageController.text.toString(),
       'incomeRange': dropdownValue,
     }).then((value) {
-      Navigator.pushAndRemoveUntil(
-        context,
-        MaterialPageRoute(builder: (context) => const BottomNav()),
-        (route) => false,
-      );
+      Navigator.pop(context);
+      // PersistentNavBarNavigator.pushNewScreen(
+      //   context,
+      //   screen: const BottomNav(),
+      //   withNavBar: false, // OPTIONAL VALUE. True by default.
+      //   pageTransitionAnimation: PageTransitionAnimation.cupertino,
+      // );
+      // Navigator.of(context).pop();
+
       ToastMessage().toastMessage('Updated!', Colors.green);
       setState(() {
         loading = false;

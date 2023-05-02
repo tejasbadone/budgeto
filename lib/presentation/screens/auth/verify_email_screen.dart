@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:budgeto/colors.dart';
 import 'package:budgeto/presentation/screens/user_profile/update_account_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';

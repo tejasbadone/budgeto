@@ -3,8 +3,6 @@ import 'package:budgeto/presentation/widgets/button.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../colors.dart';
 import '../../../../logic/flutter_toast.dart';
 
 class InvestmentScreen extends StatefulWidget {

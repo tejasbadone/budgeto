@@ -1,5 +1,3 @@
-import 'package:budgeto/colors.dart';
-
 import 'package:flutter/material.dart';
 
 class CheckMailScreen extends StatelessWidget {
