@@ -1,6 +1,7 @@
 
 # Budgeto
-![App Screenshot](https://github.com/tejasbadone/budgeto/blob/main/assets/images/screenshots/header.png?raw=true)
+![Logo](https://github.com/tejasbadone/budgeto/blob/main/assets/app_icon.png?raw=true)
+
 
 Budgeto is a money management prototype app that allows users to split their income into customizable categories of "need," "expenses," and "savings." With features like autopay for bills, manual and planning tools for emergency funds and car purchases, Budgeto helps users stay on top of their finances and reach their financial goals.
 
@@ -49,31 +50,64 @@ Budgeto features user email authentication, which adds an extra layer of securit
 ## GIF
 
 - **Add Funds**
-![](https://github.com/tejasbadone/budgeto/blob/main/assets/images/screenshots/gifs/add%20funds.gif?raw=true)
+
+![](https://github.com/tejasbadone/budgeto/blob/main/assets/images/screenshots/gif/add%20funds.gif?raw=true)
+
+___________________________________________________________________
+
 
 - **Need Category Autopay**
-![](https://github.com/tejasbadone/budgeto/blob/main/assets/images/screenshots/gifs/need%20autopay.gif?raw=true)
+
+![](https://github.com/tejasbadone/budgeto/blob/main/assets/images/screenshots/gif/need%20autopay.gif?raw=true)
+
+___________________________________________________________________
+
 
 - **Need Direct Pay**
-![](https://github.com/tejasbadone/budgeto/blob/main/assets/images/screenshots/gifs/need%20pay.gif?raw=true)
+
+![](https://github.com/tejasbadone/budgeto/blob/main/assets/images/screenshots/gif/need%20pay.gif?raw=true)
+
+___________________________________________________________________
+
 
 - **Expenses Category**
-![](https://github.com/tejasbadone/budgeto/blob/main/assets/images/screenshots/gifs/expenses%20pay.gif?raw=true)
+
+![](https://github.com/tejasbadone/budgeto/blob/main/assets/images/screenshots/gif/expenses%20pay.gif?raw=true)
+
+___________________________________________________________________
+
 
 - **Savings Category - Manual Investment**
-![](https://github.com/tejasbadone/budgeto/blob/main/assets/images/screenshots/gifs/savings%20-%20manual%20investment.gif?raw=true)
+
+![](https://github.com/tejasbadone/budgeto/blob/main/assets/images/screenshots/gif/savings%20-%20manual%20investment.gif?raw=true)
+
+___________________________________________________________________
+
 
 - **Planning - Emergency Funds**
-![](https://github.com/tejasbadone/budgeto/blob/main/assets/images/screenshots/gifs/planning%20-%20emergency%20funds.gif?raw=true)
+
+![](https://github.com/tejasbadone/budgeto/blob/main/assets/images/screenshots/gif/planning%20-%20emergency%20funds.gif?raw=true)
+
+___________________________________________________________________
+
 
 - **Planning - Car Plan**
-![](https://github.com/tejasbadone/budgeto/blob/main/assets/images/screenshots/gifs/planning%20-%20car%20plan.gif?raw=true)
+
+![](https://github.com/tejasbadone/budgeto/blob/main/assets/images/screenshots/gif/planning%20-%20car%20plan.gif?raw=true)
+
+___________________________________________________________________
+
 
 - **Light Theme**
-![](https://github.com/tejasbadone/budgeto/blob/main/assets/images/screenshots/gifs/light%20theme.gif?raw=true)
+
+![](https://github.com/tejasbadone/budgeto/blob/main/assets/images/screenshots/gif/light%20theme.gif?raw=true)
+
+___________________________________________________________________
+
 
 - **Dark Theme**
-![](https://github.com/tejasbadone/budgeto/blob/main/assets/images/screenshots/gifs/dark%20theme.gif?raw=true)
+
+![](https://github.com/tejasbadone/budgeto/blob/main/assets/images/screenshots/gif/dark%20theme.gif?raw=true)
 
 
 
