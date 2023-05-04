@@ -37,9 +37,12 @@ Budgeto features user email authentication, which adds an extra layer of securit
 ## Screenshots
 
 **Light Theme**
+
 ![App Screenshot](https://github.com/tejasbadone/budgeto/blob/main/assets/images/screenshots/budgeto_light.png?raw=true)
 
+
 **Dark Theme**
+
 ![App Screenshot](https://github.com/tejasbadone/budgeto/blob/main/assets/images/screenshots/budgeto_dark.png?raw=true)
 
 
@@ -112,6 +115,18 @@ ___________________________________________________________________
 
 
 
+## Setup
+
+Run the following commands from your terminal:
+
+1) `https://github.com/tejasbadone/budgeto.git` to clone this repository 
+
+2) `flutter pub get` in the project root directory to install all the required dependencies.
+    
+
+
+
+
 ## Tech Stack
 
 **Client:** Flutter
@@ -123,5 +138,12 @@ ___________________________________________________________________
 **Client:** admin@budgeto.com
 
 **Server:** budgeto123
+
+
 ## Note
 Since this is a prototype users cannot send or receive actual money
+
+
+## License
+[MIT License](https://github.com/tejasbadone/budgeto/blob/main/LICENSE)
+
