@@ -113,6 +113,8 @@ ___________________________________________________________________
 ![](https://github.com/tejasbadone/budgeto/blob/main/assets/images/screenshots/gif/dark%20theme.gif?raw=true)
 
 
+## Download
+Download apk - https://drive.google.com/file/d/1ND6bVOeYheTLN19f6EMqhVEY8JlVIEhq/view?usp=share_link
 
 
 ## Setup
@@ -125,8 +127,6 @@ Run the following commands from your terminal:
     
 
 
-
-
 ## Tech Stack
 
 **Client:** Flutter
@@ -135,9 +135,9 @@ Run the following commands from your terminal:
 
 
 ## Test Credentials
-**Client:** admin@budgeto.com
+**Email:** admin@email.com
 
-**Server:** budgeto123
+**Password:** admin123
 
 
 ## Note
