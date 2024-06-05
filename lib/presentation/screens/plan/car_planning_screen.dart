@@ -47,7 +47,6 @@ class _CarPlanningScreenState extends State<CarPlanningScreen> {
     DataSnapshot snapshot = await splitRef.get();
     Map<dynamic, dynamic> map = snapshot.value as Map<dynamic, dynamic>;
     dynamic needAvailable = map['needAvailableBalance'];
-    dynamic needSpendings = map['needSpendings'];
 
     dynamic carAmount = double.tryParse(carAmountController.text);
     dynamic targetSplit =
@@ -94,6 +93,7 @@ class _CarPlanningScreenState extends State<CarPlanningScreen> {
 
         ToastMessage().toastMessage('Activated!', Colors.green);
 
+        // ignore: use_build_context_synchronously
         Navigator.pop(context);
       }
     }

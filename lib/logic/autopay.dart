@@ -13,7 +13,7 @@ class Autopay {
     const oneMinute = Duration(minutes: 1);
     Timer.periodic(oneMinute, (timer) async {
       DatabaseReference autopayRef =
-          await ref.child(user.uid).child('split').child('needAutopay');
+          ref.child(user.uid).child('split').child('needAutopay');
       DatabaseReference autopayBalanceRef = ref.child(user.uid).child('split');
       DatabaseReference transactionRef =
           ref.child(user.uid).child('split').child('needTransactions');

@@ -34,22 +34,6 @@ Budgeto features user email authentication, which adds an extra layer of securit
 
 
 
-## Screenshots
-
-**Light Theme**
-
-![App Screenshot](https://github.com/tejasbadone/budgeto/blob/main/assets/images/screenshots/budgeto_light.png?raw=true)
-
-
-**Dark Theme**
-
-![App Screenshot](https://github.com/tejasbadone/budgeto/blob/main/assets/images/screenshots/budgeto_dark.png?raw=true)
-
-
-
-
-
-
 ## GIF
 
 - **Add Funds**
